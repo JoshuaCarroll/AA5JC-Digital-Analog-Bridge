@@ -8,9 +8,17 @@ We are going to take you through installing one of the most requested DVSwitch b
 Execute the following commands:
 
     sudo -s  
-    pacman -Syu
     cd /etc/asterisk 
     systemctl stop asterisk
+    
+If you are running Raspbian (or a type of Ubuntu) execute:
+
+    apt-get update
+    apt-get dvswitch -y
+    
+If you are running the HamVoip image (or a type of ArchLinux) execute:
+
+    pacman -Syu
     pacman -S dvswitch
 
 ## Asterisk
@@ -88,12 +96,6 @@ In the [DMR] stanza change `Enable=0` to `Enable=1`
 
 In the [DMR_Network] stanza Change: `Address=dvswitch.org` to your regional DMR master.  In Arkansas we use 3103.repeater.net.  You may need to research to find yours.
 
-Login to your selfcare page at [https://brandmeister.network/?page=selfcare](https://brandmeister.network/?page=selfcare). On the left hand side you should see “My hotspots”.
-
-Notice that the [DMR ID + any two digits] you entered earlier is showing the green “plug” icon. That means it is connected to BrandMeister. Click on that hotspot number. 
-
-In the center of the page you should see Sysops (system operators). You should be the only sysop for now, but you could add others if you want.  You can also setup a static talk group to pass through the bridge. To do so, add that talkgroup you want to always be connected in the "Static Talkgroups" section.
-
 ## Analog Bridge
 Edit the analog bridge configuration by executing: 
 
@@ -114,4 +116,14 @@ Reboot by executing
 
     reboot
 
-When it comes back up just link your public and private nodes together and you should be bridged from AllStar <> analog <> DMR.
+Login to your selfcare page at [https://brandmeister.network/?page=selfcare](https://brandmeister.network/?page=selfcare). On the left hand side you should see “My hotspots”.
+
+Notice that the [DMR ID + any two digits] you entered earlier is showing the green “plug” icon. That means it is connected to BrandMeister. Click on that hotspot number. 
+
+In the center of the page you should see Sysops (system operators). You should be the only sysop for now, but you could add others if you want.  You can also setup a static talk group to pass through the bridge. To do so, add that talkgroup you want to always be connected in the "Static Talkgroups" section.
+
+Reboot by executing
+
+    reboot
+
+When it comes back up, just link your public and private nodes together and you should be bridged from AllStar <> analog <> DMR.
