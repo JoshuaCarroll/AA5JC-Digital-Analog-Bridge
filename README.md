@@ -92,9 +92,13 @@ In the [General] stanza, change the following line to your DMR ID + any two digi
 
     Id=1234567
 
-In the [DMR] stanza change `Enable=0` to `Enable=1`
+In the [DMR] stanza change:
+`Enable=0` to `Enable=1`
 
-In the [DMR_Network] stanza Change: `Address=dvswitch.org` to your regional DMR master.  In Arkansas we use 3103.repeater.net.  You may need to research to find yours.
+In the [DMR_Network] stanza Ccange:
+
+`Enable=0` to `Enable=1`
+`Address=dvswitch.org` to your regional DMR master.  In Arkansas we use 3103.repeater.net.  You may need to research to find yours.
 
 ## Analog Bridge
 Edit the analog bridge configuration by executing: 
