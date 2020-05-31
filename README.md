@@ -106,9 +106,13 @@ In the [GENERAL] stanza, change `decoderFallBack` to `true`.
 In the [AMBE_AUDIO] stanza make the following changes: 
 
 gatewayDmrId = *your DMR ID number* 
+
 repeaterID = *the [DMR ID + any two digits] you selected earlier*
+
 txTg = *the talkgroup to which you want to send traffic * 
+
 txPort = 31103 
+
 rxPort = 31100
 
 ## Wrap it up
