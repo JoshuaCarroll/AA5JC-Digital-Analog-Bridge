@@ -10,7 +10,7 @@ Execute the following commands:
     sudo -s  
     apt-get update
     cd /etc/asterisk 
-    systemctl stop asterisk  nano
+    systemctl stop asterisk
     apt-get install dvswitch -y
 
 ## Asterisk
