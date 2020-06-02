@@ -1,4 +1,6 @@
 
+# This is a work in progress.  These intructions work fine on Debian-based systems, but not Arch Linux (HamVOIP). Working on that.  You've been warned.
+
 
 # How to create an AllStar to DMR Bridge (concise version)
 
